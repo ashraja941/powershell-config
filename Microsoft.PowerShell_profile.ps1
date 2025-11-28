@@ -7,3 +7,8 @@ Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 # Custom Keybindings
 function fz { z (fzf --walker=dir --walker-root=.) }
+
+# predictive view in PS
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin # Plugin, History, HistoryAndPlugin
+Set-PSReadLineOption -PredictionViewStyle ListView   # ListView or InlineView
+
